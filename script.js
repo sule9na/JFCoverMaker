@@ -269,8 +269,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.getElementById("overlayType").addEventListener("change", e => {
-        settings.overlayType = e.target.value;
-        updateGradientSizeVisibility();
+    settings.overlayType = e.target.value;
+    updateGradientSizeVisibility();
+    draw();
     });
 
     updateGradientSizeVisibility();
