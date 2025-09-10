@@ -1,6 +1,8 @@
 # Jellyfin Cover Maker
 A simple to use thumbnail cover maker, so you can create beautiful images for your home screen media libraries.
 
+![screenshot](example.jpg)
+
 ## Quick Start
 The project is a simple HTML, CSS, Js bundle that you can on a local web server, if you so choose. For ease of use it's recommended to just use the published version of the tool here:
 
