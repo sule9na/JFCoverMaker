@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background: #111;
+    color: white;
+}
+
+#controls {
+    width: 300px;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #222;
+    display: none;
+    /* hidden until fonts are loaded */
+}
+
+#controls label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#controls input[type="text"],
+#controls input[type="range"] {
+    width: 100%;
+}
+
+#controls input[type="color"] {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    background: none;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#preview-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #444;
+    padding: 10px  10px 10px 10px;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  max-height: 100%;
+  background: #000000;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #4560a0ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.exportbutton {
+    background: #642020ff;
+}
+
+button:hover {
+    background: #4560a0ff;
+}
+
+.toggle-btn {
+    width: 50%;
+    margin-top: 0;
+    background: #4560a0ff;
+    transition: background 0.2s;
+    position: relative;
+}
+
+.toggle-btn.active {
+    background: #636363ff;
+    color: #fff;
+}
+
+.toggle-btn .checkmark {
+    font-size: 16px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+#loading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-btn:hover {
+    background: #364cdfff;
+}
+
+.active {
+    background: #565974ff;
+}

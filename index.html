@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='styles.css'>
+    <script src='script.js'></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Jellyfin Cover Maker</title>
+  </head>
+  <body>
+    <div id="controls">
+      <label>Upload Image</label>
+      <input type="file" id="imageUpload" accept="image/*">
+
+      <label>Image Scale</label>
+      <input type="range" id="imageScale" min="0.5" max="2" step="0.01"
+        value="1">
+
+      <label>Darkening</label>
+      <input type="range" id="darkening" min="0" max="1" step="0.01" value="0">
+
+      <label>Title</label>
+      <input type="text" id="titleText" placeholder="Collection Title"
+        value="Music">
+
+      <label>Text Color</label>
+      <input type="color" id="textColor" value="#ffffff">
+
+      <label>Font</label>
+      <select id="fontSelect"></select>
+      <p>Choose a font from <a href="https://fonts.google.com" target="_blank">Google Fonts</a></p>
+
+      <label>Text Size</label>
+      <input type="range" id="fontSize" min="50" max="600" step="1" value="250">
+
+      <label>Style</label>
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button type="button" id="boldToggle" class="toggle-btn">Bold</button>
+        <button type="button" id="italicToggle"
+          class="toggle-btn">Italic</button>
+      </div>
+
+      <label>Overlay Type</label>
+      <select id="overlayType">
+        <option value="fill">Fill</option>
+        <option value="gradient-horizontal">Gradient Middle Horizontal</option>
+        <option value="gradient-vertical">Gradient Middle Vertical</option>
+        <option value="gradient-bottom">Gradient Bottom</option>
+        <option value="gradient-top">Gradient Top</option>
+        <option value="gradient-left">Gradient Left</option>
+        <option value="gradient-right">Gradient Right</option>
+        <option value="gradient-radial">Gradient Radial</option>
+      </select>
+
+      <label>Overlay Colour</label>
+      <input type="color" id="sectionColor" value="#00ff00">
+
+      <label>Overlay Opacity</label>
+      <input type="range" id="gradientAmount" min="0" max="1" step="0.01"
+        value="0.5">
+
+      <label>Gradient Size</label>
+      <input type="range" id="gradientSize" min="0" max="1" step="0.01"
+        value="0.5">
+
+      <label>Outer Glow Amount</label>
+      <input type="range" id="glowAmount" min="0" max="50" step="1" value="20">
+
+      <label>Glow Lightness</label>
+      <input type="range" id="glowLightness" min="-1" max="1" step="0.01"
+        value="0.3">
+
+      <button id="exportBtn" class="exportbutton">Export PNG</button>
+    </div>
+
+    <div id="preview-container" style="flex-direction:column; align-items:center;">
+      <div id="loading">Please Wait<br>Loading Assets<span id="dots"></span></div>
+      <canvas id="preview" width="2400" height="1350" style="width:2400px;height:1350px"></canvas>
+      <div id="dragMessage" style="display:none; color:#ccc; text-align:center; font-size:18px; margin-top:10px;">Drag on the image to reposition it</div>
+    </div>
+  </body>
+</html>
